@@ -1,7 +1,7 @@
 .idea/
 
 /media
-
+*.pyc
 
 
 # Elastic Beanstalk Files
