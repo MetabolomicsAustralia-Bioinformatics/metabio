@@ -5,6 +5,7 @@
 * Does linear-regression fitting to fit calibration curves
 * Currently served at: mastr-quant.bio21.unimelb.edu.au
 * Sample data available in `/static/sample_input.csv`
+* Built from Django v2.0 or v2.2 (tested with both), packaged as `metabioapp`. 
 
 ## Setup
 
@@ -36,7 +37,7 @@ sudo mysql_secure_installation
 # be sure to update Django's settings.py file wth the password of your choice (line 96)
 
 # login to mysql console as root
-# sudo is probably required the first time this is run
+# sudo might be required the first time this is run
 sudo mysql -u root -p
 
 # Create database called 'backend' if it doesn't exist
@@ -47,6 +48,7 @@ quit; # exit mysql console
 service mysql restart
 
 # Make intial migrations to update `backend` with classes from `models.py`
+# Run this from the directory which manage.py lives in
 python3 manage.py makemigration
 ```
 
@@ -64,3 +66,9 @@ Deactivate environment
 ```
 deactivate
 ```
+
+## Licensing and References
+
+* If you use this software, please cite:
+
+* This app is released under a [GNU GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) license, which allows end users the freedom to study, share or modify this software for commercial and private use, with the restriction that any derivative work must be made open-source and distributed under the same license terms. 
