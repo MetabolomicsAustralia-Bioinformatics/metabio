@@ -71,4 +71,4 @@ deactivate
 
 * If you use this software, please cite:
 
-* This app is released under a [GNU GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) license, which allows end users the freedom to study, share or modify this software for commercial and private use, with the restriction that any derivative work must be made open-source and distributed under the same license terms. 
+* This app is released under a [GNU GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) license, which allows end users the freedom to study, share, distribute or modify this software for commercial and private use, with the restriction that any derivative work must be made open-source and distributed under the same license terms. 

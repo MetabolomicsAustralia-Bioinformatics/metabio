@@ -572,6 +572,7 @@ Click on "Confirm" to generate the output file.<br /></p></p>
         });
         $(function () {
             if ('{{ try }}' == 'False'){
+                console.log("try == F: proc ajax GET request");
                 $.ajax({
                 type: 'GET',
                 async: true,
@@ -582,8 +583,13 @@ Click on "Confirm" to generate the output file.<br /></p></p>
                 },
                 success: function(originData) {
                     data = originData;
+                    //console.log(data);
+                    //console.log(all_metabolo);
+
                     fill_in_table(originData);
                     fill_IS_select_table(originData);
+                    console.log(all_metabolo.length);
+
                     for (var i = 0; i < all_metabolo.length; i++) {
                         IS_select[all_metabolo[i]] = 'None';
                     }
@@ -612,6 +618,7 @@ Click on "Confirm" to generate the output file.<br /></p></p>
                     })
             }
             else {
+                console.log("try == T: proc ajax POST request");
                 $.ajax({
                    type: 'POST',
                    async: true,
@@ -621,6 +628,7 @@ Click on "Confirm" to generate the output file.<br /></p></p>
                        'csrfmiddlewaretoken': '{{ csrf_token }}'},
                    success: function(originData) {
                       data = originData;
+                      console.log(originData);
                       fill_in_table(originData);
                       fill_IS_select_table(originData);
                       for (var i = 0; i < all_metabolo.length; i++) {
@@ -905,7 +913,6 @@ Click on "Confirm" to generate the output file.<br /></p></p>
                     $(eachid).append("<td>" + each + "</td>");
                 }
             }
-            
         }
         function get_selected_metabolo() {
             return table.rows('.selected').data()[0][0];
