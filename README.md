@@ -1,15 +1,17 @@
 # metabio
 
-## Intro
+# Overview
 
-* Does linear-regression fitting to fit calibration curves
+MASTR-Quant is an open-source, web-based software tool that allows users to calculate concentration values of features in mass spectrometry data through visualizing and defining calibration curves based on a range of adjustable parameters. 
+
 * Currently served at: mastr-quant.bio21.unimelb.edu.au
 * Sample data available in `/static/sample_input.csv`
 * Built from Django v2.0 or v2.2 (tested with both), packaged as `metabioapp`. 
 
-## Setup
+# Setup
 
 Local installation instructions for Ubuntu (tested on 18.04)
+
 ```
 # activate env
 source /path/to/venv/bin/activate
@@ -21,7 +23,7 @@ pip3 install -r requirements.txt
 django-admin --version
 ```
 
-### Server Setup
+### SQL-database Setup
 
 Django is currently connected to a `mysql` backend database, with user `root`, and password `root`. These can be changed by changing the relevant parameters in `settings.py` (starting line 96). 
 
@@ -72,3 +74,5 @@ deactivate
 * If you use this software, please cite:
 
 * This app is released under a [GNU GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) license, which allows end users the freedom to study, share, distribute or modify this software for commercial and private use, with the restriction that any derivative work must be made open-source and distributed under the same license terms. 
+
+* Contact: Dr. Vinod Narayana, vinod.narayana "at" unimelb.edu.au
