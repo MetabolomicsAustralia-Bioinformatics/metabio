@@ -45,19 +45,11 @@ Targeted analysis in mass spectrometry uses a calibration curve to derive the co
 
 # Citations
 
-Citations to entries in paper.bib should be in
-[rMarkdown](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
-format.
-
-For a quick reference, the following citation commands can be used:
-- `@author:2001`  ->  "Author et al. (2001)"
-- `[@author:2001]` -> "(Author et al., 2001)"
-- `[@author1:2001; @author2:2001]` -> "(Author1 et al., 2001; Author2 et al., 2002)"
-
+- `@Civelek:2014`  ->  "Civelek et al. (2014)"
+- `[@Hasin:2017]` -> "(Hasin et al., 2017)"
 
 # Acknowledgements
 
-We acknowledge contributions from Brigitta Sipocz, Syrtis Major, and Semyeong
-Oh, and support from Kathryn Johnston during the genesis of this project.
+The authors are grateful to the Victorian Node of Metabolomics Australia, which is funded through the Bioplatforms Australia Pty. Ltd., a National Collaborative Research Infrastructure Strategy (NCRIS), 5.1 biomolecular platforms and informatics investment and co-investment from the Victorian State government and the University of Melbourne. Conflicts of interest: none declared. 
 
 # References
