@@ -43,11 +43,6 @@ Targeted analysis in mass spectrometry uses a calibration curve to derive the co
 
 ``MASTR-Quant`` is an open-source, web application that allows users to calculate the concentration values of features in mass spectrometry data through visualizing and defining calibration curves based on a range of adjustable parameters. ``MASTR-Quant`` presents the user with options including and excluding data points to define linear or quadratic calibration ranges. The tool also includes options to assign individual internal standards to specific analytes by applying weighting factors, background subtraction and dilution ratios, normalization of the data based on internal standards and other external measurements, and the option for assessing the quality of data through the calculation of coefficient of variation values of each sample group. The final output is downloadable as an Excel file with multiple sheets containing detailed results of the individual steps involved in the calculation process.
 
-# Citations
-
-- `@Civelek:2014`  ->  "Civelek et al. (2014)"
-- `[@Hasin:2017]` -> "(Hasin et al., 2017)"
-
 # Acknowledgements
 
 The authors are grateful to the Victorian Node of Metabolomics Australia, which is funded through the Bioplatforms Australia Pty. Ltd., a National Collaborative Research Infrastructure Strategy (NCRIS), 5.1 biomolecular platforms and informatics investment and co-investment from the Victorian State government and the University of Melbourne. Conflicts of interest: none declared. 
