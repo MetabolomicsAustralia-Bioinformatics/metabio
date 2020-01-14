@@ -100,8 +100,6 @@ def is_normalise(filename):
     return (fin_list, tr_finalarr)
 
 
-
-
 def is_normalise_negative(filename):
     mat = []
     with open(filename, 'r') as fp:
@@ -368,38 +366,6 @@ def generate_output(input_path, output_path, is_nor):
             os.remove(input_path)
         if os.path.isfile(output_path):
             os.remove(output_path)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

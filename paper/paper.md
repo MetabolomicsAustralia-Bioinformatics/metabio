@@ -45,6 +45,6 @@ Targeted analysis in mass spectrometry uses a calibration curve to derive the co
 
 # Acknowledgements
 
-The authors are grateful to the Victorian Node of Metabolomics Australia, which is funded through the Bioplatforms Australia Pty. Ltd., a National Collaborative Research Infrastructure Strategy (NCRIS), 5.1 biomolecular platforms and informatics investment and co-investment from the Victorian State government and the University of Melbourne. Conflicts of interest: none declared. 
+The authors are grateful to the Victorian Node of Metabolomics Australia, which is funded through the Bioplatforms Australia Pty. Ltd., a National Collaborative Research Infrastructure Strategy (NCRIS), 5.1 biomolecular platforms and informatics investment and co-investment from the Victorian State government and the University of Melbourne. Conflicts of interest: none declared.
 
 # References

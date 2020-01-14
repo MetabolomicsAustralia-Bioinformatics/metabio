@@ -9,12 +9,14 @@ def is_metabolite(name):
         return True
     return False
 
+
 def normalise_self(is_list):
     min_val = min(is_list)
     if min_val == 0:
         min_val = 1
     for i in range(0, len(is_list)):
         is_list[i] /= min_val
+
 
 def cal_equation(y, equation, origin):
     if y == 0:
@@ -51,6 +53,7 @@ def cal_equation(y, equation, origin):
                 return 0
     return 0
 
+
 def cal_predict_points(points, equation, origin):
     res = []
     '''
@@ -75,6 +78,7 @@ def cal_predict_points(points, equation, origin):
         res.append(cal_equation(y, equation, origin))
     return res
 
+
 def is_normalisation(input_dic, is_method_dic):
     is_dic = {}
     # store all IS column in a dic structure:  {'IS1' : [1,2,3,4,6]}
@@ -97,6 +101,7 @@ def is_normalisation(input_dic, is_method_dic):
                 input_dic[each_col][i] /= is_values[i]
     return input_dic
 
+
 def reagent_sub(input_dic):
     for each_col in input_dic:
         total = 0
@@ -112,6 +117,7 @@ def reagent_sub(input_dic):
                 if input_dic[each_col][i] != 0:
                     input_dic[each_col][i] -= ave
     return input_dic
+
 
 def cal_regression(input_dic, regression_option):
     for each_col in input_dic:
@@ -170,6 +176,7 @@ def cal_regression(input_dic, regression_option):
                 input_dic[each_col][i] = res[i]
     return input_dic
 
+
 def write_data(input_dic, workbook, sheet_name, text, dilution_factor):
     #workbook = openpyxl.load_workbook(workbook_path)
     cur_sheet = workbook.create_sheet(title=sheet_name)
@@ -190,6 +197,7 @@ def write_data(input_dic, workbook, sheet_name, text, dilution_factor):
                     tmp.append(input_dic[each_col][i] * dilution_factor)
         cur_sheet.append(tmp)
     #workbook.save(workbook_path)
+
 
 def write_options(input_dic, is_method_dic, regression_option, workbook):
     cur_sheet = workbook.create_sheet(title='Opt')
@@ -235,6 +243,7 @@ def stats(input_dic, workbook, sheet_name, text):
 
         cur_sheet.append([])
     #workbook.save(workbook_path)
+
 
 def normalising_factor(input_dic):
     nf = input_dic['NF']

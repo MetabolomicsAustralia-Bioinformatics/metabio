@@ -1,5 +1,3 @@
-
-
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect
 from django.core.files import File
 from django.http import StreamingHttpResponse
@@ -103,8 +101,6 @@ def upload(request):
         form = UploadFileForm()
     return render(request, 'main_page.html', {'form': form, 'typeError': False, 'graph': False, 'show_result': False, 'try': False})
 '''
-
-
 
 
 def upload(request):
