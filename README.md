@@ -6,7 +6,7 @@ MASTR-Quant is an open-source, web-based software tool that allows users to calc
 
 * Currently served at: mastr-quant.bio21.unimelb.edu.au
 * Sample data available in `/static/sample_input.csv`
-* Built from Django v2.0 or v2.2 (tested with both), packaged as `metabioapp`. 
+* Built from Django v2.0 (tested with 2.0 and 2.2), app packaged as `metabioapp`. 
 
 # Setup
 

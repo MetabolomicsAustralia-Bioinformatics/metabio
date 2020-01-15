@@ -140,7 +140,6 @@ def generate_filtered_input(input_path, selected, offset):
     return json.dumps(res)
 
 
-
 def generate_filtered_output(input_file, output_path):
     try:
         outfile = open(output_path, 'w')
