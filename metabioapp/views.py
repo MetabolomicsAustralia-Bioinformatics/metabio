@@ -241,7 +241,6 @@ def show_result(request):
         down_load_pk = result_file_object.pk
     f.close()
 
-
     #generate_filtered_output(filtered_json, './result_csv.csv')
     #generate_output('./result_csv.csv', './result_xlsx.xlsx', is_nor)
 

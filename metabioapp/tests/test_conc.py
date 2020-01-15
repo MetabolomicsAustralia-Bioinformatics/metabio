@@ -8,13 +8,13 @@ class TestConc(SimpleTestCase):
 	def test_is_metabolite(self):
 	    assert conc.is_metabolite("Glucose") == True
 
+
 	def test_normalise_self(is_list):
-		"""Test can't be written because conc.normalise_self doesn't have a return statement.
-		"""
-		pass
+		assert conc.normalise_self([0, 1, 2, 3]) == [0.0, 1.0, 2.0, 3.0]
+		assert conc.normalise_self([2, 4, 6, 8]) == [1.0, 2.0, 3.0, 4.0]
 
 	def test_cal_equation(y, equation, origin):
-		
+
 
 
 	def normalising_factor(input_dic):

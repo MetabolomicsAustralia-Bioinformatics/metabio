@@ -4,8 +4,18 @@ import openpyxl
 from numpy import array, mean, std
 
 
-def is_metabolite(name):
-    if name != 'id' and name != 'Concentration' and name != 'Group' and name != 'std_replicate' and name != 'NF' and name != 'Dilution' and not name.startswith('IS'):
+def is_metabolite(colname):
+    """Checks if the input column name is a metabolite name, rather than a metadata column name, by eliminating certain key words.
+
+    PARAMS
+    ------
+    colname: str; input string
+
+    RETURNS
+    -------
+    boolean; true if colname is some specific metadata column name, false otherwise
+    """
+    if colname != 'id' and colname != 'Concentration' and colname != 'Group' and colname != 'std_replicate' and colname != 'NF' and colname != 'Dilution' and not colname.startswith('IS'):
         return True
     return False
 
@@ -16,6 +26,8 @@ def normalise_self(is_list):
         min_val = 1
     for i in range(0, len(is_list)):
         is_list[i] /= min_val
+
+    return is_list
 
 
 def cal_equation(y, equation, origin):
@@ -302,8 +314,5 @@ def generate_output(inputdict, path, options):
     active_after = workbook.active
 
     workbook.save(path)
-
-
-
 
 
