@@ -84,7 +84,7 @@
 <h1 id="mastr-quant">MASTR-Quant</h1>
 <h2 id="overview">Overview</h2>
 <p>Targeted analysis in mass spectrometry uses a calibration curve to compute the concentration of a substance, by comparison to a set of samples of known concentration. This is canonically done by fitting a straight line of best fit, in a linear regression, to samples with known concentrations and abundance values. New samples with known abundance values but unknown concentrations can then be computed via simple linear interpolation using this fitted linear model.</p>
-<p>MASTR-Quant is an open-source web application that allows users to calculate the concentration values of features in mass spectrometry data through visualizing and defining calibration curves based on a range of adjustable parameters. MASTR-Quant presents the user with options including and excluding data points to define linear or quadratic calibration ranges. The tool also includes options to assign individual internal standards to specific analytes by applying weighting factors, background subtraction and dilution ratios, normalization of the data based on internal standards and other external measurements, and the option for assessing the quality of data through the calculation of coefficient of variation values of each sample group. The final output is downloadable as an Excel file with multiple sheets containing detailed results of the individual steps involved in the calculation process.</p>
+<p>MASTR-Quant is an open-source web application that allows users to calculate the concentration values of features in mass spectrometry data through visualizing and fitting calibration curves, based on a range of adjustable parameters, as well as instrument-related model-fitting options such as special treatment of internal standards, and background subtractions. The final output is downloadable as an Excel file with multiple sheets containing detailed results of the individual steps involved in the calculation process.</p>
 <p>MASTR-Quant is available <a href="mastr-quant.bio21.unimelb.edu.au">here</a>.</p>
 <h2 id="statement-of-need">Statement of Need</h2>
 <p>MASTR-Quant provides an open-access, transparent way of calculating calibration curves, which would otherwise be inaccessible due to the need to utilize proprietary vendor software, which are usually only compatible with their respective mass spectrometry instruments as well. The methods used by MASTR-Quant are compatible across all vendors.</p>
@@ -234,5 +234,5 @@ docs/
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-03-23 02:41:16
+Build Date UTC : 2020-03-23 03:23:25
 -->
