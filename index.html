@@ -66,10 +66,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#commands" class="nav-link">Commands</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
               <ul class="nav flex-column">
               </ul>
@@ -102,49 +98,43 @@ django-admin --version
 
 <h3 id="sql-database-setup">SQL-database Setup</h3>
 <p>Django is currently connected to a mysql backend database, with user root, and password root. These can be changed by changing the relevant parameters in settings.py (starting line 96).</p>
-<pre><code># Install mysql client if it\'s not already installed. Different OS's may have different clients. 
-# For latest versions of debian/ubuntu (as of 2018), may need:
+<ol>
+<li>Install mysql client if it's not already installed. Different OS's may have different clients. </li>
+</ol>
+<pre><code># For latest versions of debian/ubuntu (as of 2018), may need:
 sudo apt-get install libmysqlclient-dev
 sudo apt-get install default-libmysqlclient-dev # ubuntu/debian 2018
+</code></pre>
 
-# MySQL server installation
-sudo mysql_secure_installation
-# set password as &quot;root&quot;, or any other password you like. 
-# be sure to update Django's settings.py file wth the password of your choice (line 96)
+<p>MySQL server installation:</p>
+<pre><code>sudo mysql_secure_installation
+</code></pre>
 
-# login to mysql console as root
-# sudo might be required the first time this is run
-sudo mysql -u root -p
+<p>Set password to any password you like. Be sure to update Django's <code>settings.py</code> file wth the password of your choice (line 96). </p>
+<p>Now login the the <code>mysql</code> console as root to create the backend database, just called <code>backend</code>. <code>sudo</code> might be required the first time this is run:</p>
+<pre><code>sudo mysql -u root -p
 
-# Create database called 'backend' if it doesn't exist
 CREATE DATABASE backend;
+</code></pre>
 
-# Quit and restart mysql service
-quit; # exit mysql console
+<p>Now quit and restart the <code>mysql</code> service</p>
+<pre><code>quit; # exit mysql console
 service mysql restart
+</code></pre>
 
-# Make intial migrations to update `backend` with classes from `models.py`
-# Run this from the directory which manage.py lives in
-python3 manage.py makemigration
+<p>Make intial migrations to update <code>backend</code> with classes from <code>models.py</code> Run this from the directory which manage.py lives in:</p>
+<pre><code>python3 manage.py makemigration
 </code></pre>
 
 <h3 id="start-server">Start server</h3>
-<pre><code># Run from wherever `manage.py` lives 
-python3 manage.py runserver
+<p>Run from wherever <code>manage.py</code> lives:</p>
+<pre><code>python3 manage.py runserver
 </code></pre>
 
-<h3 id="teardown">Teardown</h3>
 <p>To deactivate environment:</p>
 <pre><code>deactivate
 </code></pre>
 
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
 <h2 id="project-layout">Project layout</h2>
 <pre><code>mkdocs.yml    # The configuration file.
 docs/
@@ -234,5 +224,5 @@ docs/
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-03-23 04:55:43
+Build Date UTC : 2020-03-23 04:58:39
 -->
