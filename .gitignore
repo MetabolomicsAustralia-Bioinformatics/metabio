@@ -1,7 +1,8 @@
 .idea/
 
+tmp_input.csv
 /media
-*.pyc
+#*.pyc
 ,mkdocs.yml
 /docs
 
