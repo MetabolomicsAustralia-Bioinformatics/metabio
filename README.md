@@ -5,8 +5,7 @@
 MASTR-Quant is an open-source, web-based software tool that allows users to calculate concentration values of features in mass spectrometry data through visualizing and defining calibration curves based on a range of adjustable parameters. 
 
 * Currently served at: mastr-quant.bio21.unimelb.edu.au
-* Sample data available in `/static/sample_input.csv`
-* Documentation available [here](https://metabolomicsaustralia-bioinformatics.github.io/metabio/#overview)
+* Documentation available [here](https://metabolomicsaustralia-bioinformatics.github.io/metabio/), built with `readthedocs` and `mkdocs`. 
 
 
 ## Licensing and References
