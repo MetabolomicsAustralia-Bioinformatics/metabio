@@ -85,7 +85,7 @@
 <h2 id="overview">Overview</h2>
 <p>Targeted analysis in mass spectrometry uses a calibration curve to compute the concentration of a substance, by comparison to a set of samples of known concentration. This is canonically done by fitting a straight line of best fit, in a linear regression, to samples with known concentrations and abundance values. New samples with known abundance values but unknown concentrations can then be computed via simple linear interpolation using this fitted linear model.</p>
 <p>MASTR-Quant is an open-source web application that allows users to calculate the concentration values of features in mass spectrometry data through visualizing and fitting calibration curves, based on a range of adjustable parameters, as well as instrument-related model-fitting options such as special treatment of internal standards, and background subtractions. The final output is downloadable as an Excel file with multiple sheets containing detailed results of the individual steps involved in the calculation process.</p>
-<p>MASTR-Quant is available <a href="mastr-quant.bio21.unimelb.edu.au">here</a>.</p>
+<p>MASTR-Quant is being served live <a href="mastr-quant.bio21.unimelb.edu.au">here</a>.</p>
 <h2 id="statement-of-need">Statement of Need</h2>
 <p>MASTR-Quant provides an open-access, transparent way of calculating calibration curves, which would otherwise be inaccessible due to the need to utilize proprietary vendor software, which are usually only compatible with their respective mass spectrometry instruments as well. The methods used by MASTR-Quant are compatible across all vendors.</p>
 <h2 id="local-installation">Local Installation</h2>
@@ -102,7 +102,7 @@ django-admin --version
 
 <h3 id="sql-database-setup">SQL-database Setup</h3>
 <p>Django is currently connected to a mysql backend database, with user root, and password root. These can be changed by changing the relevant parameters in settings.py (starting line 96).</p>
-<pre><code># Install mysql client if it's not already installed. Different OS's may have different clients. 
+<pre><code># Install mysql client if it/'s not already installed. Different OS's may have different clients. 
 # For latest versions of debian/ubuntu (as of 2018), may need:
 sudo apt-get install libmysqlclient-dev
 sudo apt-get install default-libmysqlclient-dev # ubuntu/debian 2018
@@ -234,5 +234,5 @@ docs/
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-03-23 03:23:25
+Build Date UTC : 2020-03-23 04:52:15
 -->
