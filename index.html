@@ -66,7 +66,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
+            <li class="nav-item" data-level="2"><a href="#output-format" class="nav-link">Output Format</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -99,7 +99,7 @@ django-admin --version
 <h3 id="sql-database-setup">SQL-database Setup</h3>
 <p>Django is currently connected to a mysql backend database, with user root, and password root. These can be changed by changing the relevant parameters in settings.py (starting line 96).</p>
 <ol>
-<li>Install mysql client if it's not already installed. Different OS's may have different clients. </li>
+<li>Install mysql client if it's not already installed. Different OS's may have different clients.</li>
 </ol>
 <pre><code># For latest versions of debian/ubuntu (as of 2018), may need:
 sudo apt-get install libmysqlclient-dev
@@ -110,7 +110,7 @@ sudo apt-get install default-libmysqlclient-dev # ubuntu/debian 2018
 <pre><code>sudo mysql_secure_installation
 </code></pre>
 
-<p>Set password to any password you like. Be sure to update Django's <code>settings.py</code> file wth the password of your choice (line 96). </p>
+<p>Set password to any password you like. Be sure to update Django's <code>settings.py</code> file wth the password of your choice (line 96).</p>
 <p>Now login the the <code>mysql</code> console as root to create the backend database, just called <code>backend</code>. <code>sudo</code> might be required the first time this is run:</p>
 <pre><code>sudo mysql -u root -p
 
@@ -135,12 +135,14 @@ service mysql restart
 <pre><code>deactivate
 </code></pre>
 
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<h2 id="output-format">Output Format</h2>
+<p>The output is a single <code>xlsx</code> file containing the results of miscellaneous calculations:
+1. <code>raw</code> - Just the input data.
+2. <code>CV</code> - The coefficient of variation (CV) values of the abundances of each metabolite, presented by group.
+3. <code>Con</code> - The calculated concentration values based on the fitted linear regression model.
+4. <code>Con_Dil</code> - Calculated concentration values based on the fitted linear regression model, adjusted with the dilution factor.
+5. <code>CV_Con</code> - The coefficient of variation (CV) values of the concentrations of each metabolite, presented by group.
+6. <code>Opt</code> - Tab reporting selected options for linear regressions. </p></div>
             </div>
         </div>
 
@@ -224,5 +226,5 @@ docs/
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-03-23 06:12:19
+Build Date UTC : 2020-03-25 05:02:45
 -->
