@@ -62,6 +62,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#input-format" class="nav-link">Input Format</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#output-format" class="nav-link">Output Format</a>
               <ul class="nav flex-column">
               </ul>
@@ -81,9 +85,21 @@
 <h2 id="overview">Overview</h2>
 <p>Targeted analysis in mass spectrometry uses a calibration curve to compute the concentration of a substance, by comparison to a set of samples of known concentration. This is canonically done by fitting a straight line of best fit, in a linear regression, to samples with known concentrations and abundance values. New samples with known abundance values but unknown concentrations can then be computed via simple linear interpolation using this fitted linear model.</p>
 <p>MASTR-Quant is an open-source web application that allows users to calculate the concentration values of features in mass spectrometry data through visualizing and fitting calibration curves, based on a range of adjustable parameters, as well as instrument-related model-fitting options such as special treatment of internal standards, and background subtractions. The final output is downloadable as an Excel file with multiple sheets containing detailed results of the individual steps involved in the calculation process.</p>
-<p>MASTR-Quant is being served live at: mastr-quant.bio21.unimelb.edu.au</p>
+<p>MASTR-Quant is being served live <a href="http://mastr-quant.bio21.unimelb.edu.au">here</a>.</p>
 <h2 id="statement-of-need">Statement of Need</h2>
 <p>MASTR-Quant provides an open-access, transparent way of calculating calibration curves, which would otherwise be inaccessible due to the need to utilize proprietary vendor software, which are usually only compatible with their respective mass spectrometry instruments as well. The methods used by MASTR-Quant are compatible across all vendors.</p>
+<h2 id="input-format">Input Format</h2>
+<p>MASTR-Quant accepts a table of abundance values in <code>csv</code> format. A sample template with dummy values is available from the home page. Note that:</p>
+<ul>
+<li>Column names should have no spaces in them.</li>
+<li>Standard samples are designated with <strong>S</strong> under the "<strong>Group</strong>" column</li>
+<li>Reagent blank samples are designated with <strong>R</strong> under the "<strong>Group</strong>" column</li>
+<li>Enter 0 in the "<strong>std_replicate</strong>" column if there are no replicates for Standards.</li>
+<li>Enter 0 in the "<strong>Concentration</strong>" column for all samples except the Standards.</li>
+<li>Enter 1 in the "<strong>NF</strong>" (normalising factor) if there are no external numerical measure to normalise to.</li>
+<li>Enter 1 if there is no dilution value.</li>
+<li>Name the internal standard columns in the format "IS_<name_of_metabolite>". </li>
+</ul>
 <h2 id="output-format">Output Format</h2>
 <p>The output is a single <code>xlsx</code> file containing the results of miscellaneous calculations:</p>
 <ol>
@@ -227,5 +243,5 @@ service mysql restart
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-03-25 05:40:03
+Build Date UTC : 2020-03-25 05:48:33
 -->
