@@ -62,11 +62,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#local-installation" class="nav-link">Local Installation</a>
+            <li class="nav-item" data-level="2"><a href="#output-format" class="nav-link">Output Format</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#output-format" class="nav-link">Output Format</a>
+            <li class="nav-item" data-level="2"><a href="#local-installation" class="nav-link">Local Installation</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -84,6 +84,16 @@
 <p>MASTR-Quant is being served live at: mastr-quant.bio21.unimelb.edu.au</p>
 <h2 id="statement-of-need">Statement of Need</h2>
 <p>MASTR-Quant provides an open-access, transparent way of calculating calibration curves, which would otherwise be inaccessible due to the need to utilize proprietary vendor software, which are usually only compatible with their respective mass spectrometry instruments as well. The methods used by MASTR-Quant are compatible across all vendors.</p>
+<h2 id="output-format">Output Format</h2>
+<p>The output is a single <code>xlsx</code> file containing the results of miscellaneous calculations:</p>
+<ol>
+<li><code>raw</code> - Just the input data.</li>
+<li><code>CV</code> - The coefficient of variation (CV) values of the abundances of each metabolite, presented by group.</li>
+<li><code>Con</code> - The calculated concentration values based on the fitted linear regression model.</li>
+<li><code>Con_Dil</code> - Calculated concentration values based on the fitted linear regression model, adjusted with the dilution factor.</li>
+<li><code>CV_Con</code> - The coefficient of variation (CV) values of the concentrations of each metabolite, presented by group.</li>
+<li><code>Opt</code> - Tab reporting selected options for linear regressions.</li>
+</ol>
 <h2 id="local-installation">Local Installation</h2>
 <p>Local installation instructions for Ubuntu (tested on 18.04)</p>
 <pre><code># activate env
@@ -133,18 +143,7 @@ service mysql restart
 
 <p>To deactivate environment:</p>
 <pre><code>deactivate
-</code></pre>
-
-<h2 id="output-format">Output Format</h2>
-<p>The output is a single <code>xlsx</code> file containing the results of miscellaneous calculations:</p>
-<ol>
-<li><code>raw</code> - Just the input data.</li>
-<li><code>CV</code> - The coefficient of variation (CV) values of the abundances of each metabolite, presented by group.</li>
-<li><code>Con</code> - The calculated concentration values based on the fitted linear regression model.</li>
-<li><code>Con_Dil</code> - Calculated concentration values based on the fitted linear regression model, adjusted with the dilution factor.</li>
-<li><code>CV_Con</code> - The coefficient of variation (CV) values of the concentrations of each metabolite, presented by group.</li>
-<li><code>Opt</code> - Tab reporting selected options for linear regressions.</li>
-</ol></div>
+</code></pre></div>
             </div>
         </div>
 
@@ -228,5 +227,5 @@ service mysql restart
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-03-25 05:03:49
+Build Date UTC : 2020-03-25 05:40:03
 -->
