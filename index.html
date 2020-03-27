@@ -98,7 +98,20 @@
 <li>Enter 0 in the "<strong>Concentration</strong>" column for all samples except the Standards.</li>
 <li>Enter 1 in the "<strong>NF</strong>" (normalising factor) if there are no external numerical measure to normalise to.</li>
 <li>Enter 1 if there is no dilution value.</li>
-<li>Name the internal standard columns in the format "IS_/<name_of_metabolite/>". </li>
+<li>Name the internal standard columns in the format "IS_(name_of_metabolite)". </li>
+</ul>
+<h3 id="terminology">Terminology</h3>
+<ul>
+<li><strong>Reagent Blank</strong> - a blank test sample which doesn't contain any study sample but has undergone the same treatment as your study sample. This test sample is necessary to verify that any positive response to your study sample is a result of the study sample itself and not any environmental effects from testing conditions, such as contaminants present in solvents or glassware.</li>
+</ul>
+<p>If you see a background signal from the reagent blank, this needs to be subtracted from the signal obtained in the the actual study samples to obtain accurate results.</p>
+<ul>
+<li>
+<p><strong>Internal Standards</strong> - An internal standard is a known concentration of metabolite that is added in a constant amount to every sample, reagents blanks and calibration standards that is analysed. This metabolite can be used to access the ratio of the analysed metabolite signal to its respective internal standard signal to correct for the loss of analyse during sample (metabolite) Extraction, storage and analysing instrumental variations. These ratios were used to obtain the metabolite concentration from a calibration curve.</p>
+</li>
+<li>
+<p><strong>Dilution Factor</strong> - The ratio of the volume of the initial concentrated sample to the volume of the final diluted sample after extraction and before analysis. This ratio is necessary to calculate the initial absolute concentration of the compound present in the initial concentrated sample.</p>
+</li>
 </ul>
 <h2 id="output-format">Output Format</h2>
 <p>The output is a single <code>xlsx</code> file containing the results of miscellaneous calculations:</p>
@@ -243,5 +256,5 @@ service mysql restart
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-03-25 05:49:30
+Build Date UTC : 2020-03-27 01:53:36
 -->
